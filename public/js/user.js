@@ -7,7 +7,13 @@
 
 	var buttonTakePhoto = document.getElementById("take-photo");
 
+	var pingpong = io('/pingpong');
+
 	var socket = io();
+
+	buttonTakePhoto.onclick = function() {
+		pingpong.emit('user-request');
+	};
 
 	buttonTakePhoto.onclick = function() {
 		socket.emit('user-request');
