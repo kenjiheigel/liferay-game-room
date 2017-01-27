@@ -50,6 +50,6 @@ io.on('connection', function(socket){
 
 app.use(express.static('public'));
 
-server.listen(9000, function () {
-	console.log('Liferay Game Room on 9000');
+server.listen(80, function () {
+	console.log('Liferay Game Room on 80');
 });
